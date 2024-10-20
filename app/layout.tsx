@@ -32,18 +32,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} text-pretty bg-background text-foregroundMuted antialiased`}
       >
-        <div className="mx-auto max-w-screen-xl px-4 py-4">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="mx-auto h-full max-w-screen-xl px-4 py-4">
             <NavBar />
-            {children}
-          </ThemeProvider>
-          <Footer />
-        </div>
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
