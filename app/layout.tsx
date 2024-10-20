@@ -4,6 +4,9 @@ import localFont from "next/font/local";
 import type { Metadata } from "next";
 import { ModeToggle } from "@/components/mode-toggle";
 import React from "react";
+import Link from "next/link";
+import { navLinks } from "@/config/links";
+import { NavBar } from "@/components/navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,15 +34,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <ModeToggle />
-          {children}
-        </ThemeProvider>
+        <div className="px-4 py-4">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NavBar />
+            {children}
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   );
