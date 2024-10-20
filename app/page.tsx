@@ -29,9 +29,7 @@ export default function Home() {
                   projects. Our platform helps you expand your network and grow
                   your career.
                 </p>
-                <Button className="transition-all duration-300 hover:drop-shadow-[0px_0px_12px_rgba(251,191,36,1)]">
-                  Get Started
-                </Button>
+                <Button>Get Started</Button>
               </div>
               <div>
                 <Image
