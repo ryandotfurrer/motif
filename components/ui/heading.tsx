@@ -1,10 +1,10 @@
 import clsx from "clsx";
 
 export type HeadingProps = {
-  align: "left" | "center" | "right";
+  align?: "left" | "center" | "right";
   children: React.ReactNode;
   level: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-  size: "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl";
+  size?: "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl";
 };
 
 export const Heading = ({

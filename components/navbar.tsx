@@ -1,6 +1,6 @@
+import { ModeToggle } from "./mode-toggle";
 import { navLinks } from "@/config/links";
 import Link from "next/link";
-import { ModeToggle } from "./mode-toggle";
 
 export function NavBar() {
   return (

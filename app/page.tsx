@@ -2,8 +2,8 @@ import { Heading } from "@/components/ui/heading";
 
 export default function Home() {
   return (
-    <div className="flex h-[800px] flex-col justify-center py-2">
-      <Heading level="h1" size="4xl" align="left">
+    <div className="flex flex-col justify-center py-2">
+      <Heading level="h1" size="4xl">
         motif
       </Heading>
       <p className="text-balance text-2xl">

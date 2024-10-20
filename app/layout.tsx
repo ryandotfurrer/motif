@@ -1,12 +1,10 @@
 import "./globals.css";
+import { Footer } from "@/components/footer";
+import { NavBar } from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import localFont from "next/font/local";
-import type { Metadata } from "next";
 import React from "react";
-import { NavBar } from "@/components/navbar";
-import { footerLinks } from "@/config/links";
-import Link from "next/link";
-import { Footer } from "@/components/footer";
+import type { Metadata } from "next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} text-foreground-muted text-foregroundMuted text-pretty bg-background antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} text-pretty bg-background text-foregroundMuted antialiased`}
       >
         <div className="mx-auto max-w-screen-xl px-4 py-4">
           <ThemeProvider
