@@ -16,6 +16,8 @@ export const Heading = ({
   const HeadingTag = level;
   const headingClassNames = clsx(
     "font-bold",
+    "text-foreground",
+    "text-balance",
     {
       "text-4xl": size === "4xl",
       "text-3xl": size === "3xl",
