@@ -27,8 +27,8 @@ export default function HamburgerMenu() {
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent className="p-4">
-        <nav className="flex h-full flex-col py-4 text-right">
+      <SheetContent className="p-4 text-right">
+        <nav className="flex h-full flex-col py-4">
           <div className="space-y-4">
             {navLinks.map((item) => (
               <MenuItemComponent key={item.name} item={item} />
