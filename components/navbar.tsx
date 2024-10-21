@@ -1,8 +1,9 @@
+import { Button } from "./ui/button";
 import { ModeToggle } from "./mode-toggle";
 import { navLinks } from "@/config/links";
-import Link from "next/link";
 import { Separator } from "./ui/separator";
-import { Button } from "./ui/button";
+import HamburgerMenu from "./hamburger";
+import Link from "next/link";
 
 export function NavBar() {
   return (
@@ -16,19 +17,24 @@ export function NavBar() {
         </Link>
       </span>
       <div className="flex h-full items-center gap-4">
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="hover:text-foreground"
-          >
-            {link.name.toLowerCase()}
-          </Link>
-        ))}
-        <ModeToggle />
-        <Separator orientation="vertical" decorative />
-        <Button variant="outline">Sign Up</Button>
-        <Button>Log In</Button>
+        <div className="sm:hidden">
+          <HamburgerMenu />
+        </div>
+        <div className="hidden h-full items-center gap-4 sm:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="hover:text-foreground"
+            >
+              {link.name.toLowerCase()}
+            </Link>
+          ))}
+          <ModeToggle />
+          <Separator orientation="vertical" decorative />
+          <Button variant="outline">Sign Up</Button>
+          <Button>Log In</Button>
+        </div>
       </div>
     </nav>
   );

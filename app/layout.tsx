@@ -38,7 +38,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="mx-auto h-full max-w-screen-xl px-4 py-4">
+          <div className="mx-auto h-full max-w-screen-xl p-4">
             <NavBar />
             <main>{children}</main>
             <Footer />
